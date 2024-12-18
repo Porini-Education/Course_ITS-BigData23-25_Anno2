@@ -21,4 +21,4 @@ python -m streamlit run app.py --server.port 8000 --server.address 0.0.0.0
 
 ![configurazione Web App su Azure](image.png)
 
-Oltre a questo, è necessario configurare le variabili d'ambiente in `Configuration` con le stringhe di connessione al database SQL Server (per la Function App) e le stringhe di connessione alla Function App (per la Web App).
+Oltre a questo, è necessario configurare le variabili d'ambiente con le stringhe di connessione al database SQL Server (per la Function App) e le stringhe di connessione alla Function App (per la Web App).
