@@ -33,7 +33,9 @@ def add_task(req: func.HttpRequest) -> func.HttpResponse:
 
         try:
             with conn.cursor() as cursor:
-                cursor.execute("INSERT INTO dbo.Tasks (Task, Category, Priority, Status) VALUES (?, ?, ?, 'Pending')", task['taskName'], task['category'], task['priority'])
+                cursor.execute(
+                    "INSERT INTO dbo.Tasks (Task, Category, Priority, Status) VALUES (?, ?, ?, 'Pending')",
+                    task['taskName'], task['category'], task['priority'])
 
         except Exception as e:
             logging.error(f"Error inserting task: {str(e)}")
